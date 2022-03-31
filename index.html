@@ -115,8 +115,7 @@
 
         ethereum.on('accountsChanged', (accounts) => {
           console.log("------------------------ ACCOUNT CHANGED ------------------------")
-          unityInstance.SendMessage('Authentication', 'InitEthAccount', accounts[0]);
-          console.log(accounts);
+          location.reload();
         });
         ethereum.request({ method: 'eth_requestAccounts' })
           .then(accounts => {
